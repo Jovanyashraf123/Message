@@ -17,7 +17,7 @@ closeBtn.addEventListener("click", () => {
 });
 
 function createHearts() {
-  for (let i = 0; i < 14; i++) {
+  for (let i = 0; i < 200; i++) {
     const heart = document.createElement("span");
     heart.className = "heart";
     heart.textContent = Math.random() > 0.5 ? "♥" : "♡";
