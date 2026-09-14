@@ -50,7 +50,7 @@ h1 {
   position: relative;
   width: 320px;
   height: 205px;
-  filter: drop-shadow(0 10px 15px rgba(90, 30, 50, .18));
+  filter: drop-shadow(0 10px 15px rgba(90, 30, 50, 0.18));
 }
 
 .back {
@@ -71,8 +71,8 @@ h1 {
   padding: 17px 15px;
   background: #fffdfd;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,.09);
-  transition: top .85s cubic-bezier(.2,.8,.2,1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.09);
+  transition: top 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .to {
@@ -88,7 +88,7 @@ h1 {
   font-style: italic;
   font-size: 18px;
   line-height: 1.35;
-  margin: 2px 0;
+  margin: 10px 0;
 }
 
 .signature {
@@ -108,7 +108,7 @@ h1 {
   border-right: 160px solid transparent;
   border-top: 105px solid #d63f53;
   transform-origin: top center;
-  transition: transform .85s ease;
+  transition: transform 0.85s ease;
 }
 
 .left-fold {
@@ -161,8 +161,10 @@ h1 {
   background: #d91f51;
   color: white;
   font-size: 17px;
-  box-shadow: 0 3px 8px rgba(0,0,0,.18);
-  transition: opacity .25s ease, transform .25s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 .envelope.open .flap {
@@ -177,7 +179,7 @@ h1 {
 
 .envelope.open .seal {
   opacity: 0;
-  transform: translate(-50%, -50%) scale(.4);
+  transform: translate(-50%, -50%) scale(0.4);
 }
 
 .buttons {
@@ -196,18 +198,18 @@ button {
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
 button:hover,
 button.active {
   background: #c74659;
   color: white;
-  box-shadow: 0 5px 12px rgba(199,70,89,.22);
+  box-shadow: 0 5px 12px rgba(199, 70, 89, 0.22);
 }
 
 button:active {
-  transform: scale(.95);
+  transform: scale(0.95);
 }
 
 /* Floating hearts */
@@ -228,10 +230,12 @@ button:active {
 
 @keyframes floatUp {
   0% {
-    transform: translateY(0) scale(.7) rotate(0deg);
+    transform: translateY(0) scale(0.7) rotate(0deg);
     opacity: 0;
   }
-  15% { opacity: .75; }
+  15% {
+    opacity: 0.75;
+  }
   100% {
     transform: translateY(-110vh) scale(1.2) rotate(25deg);
     opacity: 0;
@@ -239,7 +243,14 @@ button:active {
 }
 
 @media (max-width: 500px) {
-  h1 { font-size: 24px; }
-  .envelope-area { transform: scale(.86); margin-top: -5px; }
-  .buttons { margin-top: 15px; }
+  h1 {
+    font-size: 24px;
+  }
+  .envelope-area {
+    transform: scale(0.86);
+    margin-top: -5px;
+  }
+  .buttons {
+    margin-top: 15px;
+  }
 }
